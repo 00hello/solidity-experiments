@@ -77,8 +77,8 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional oracle integration functionality
-    function harvestYield() external {
-        // Implementation here
+    // Additional conditional markets functionality
+    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
+        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
     }
 }
