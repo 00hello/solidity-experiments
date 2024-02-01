@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title DeFiProtocol
  * @dev Experimental DeFi protocol for decentralized insurance
  * @author Your Name
- * @notice Created on 2025-03-16
+ * @notice Created on 2024-02-01
  */
 interface IERC20 {
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
@@ -51,7 +51,8 @@ contract DeFiProtocol {
     }
     
     // capital efficiency optimization implementation
-    function stakeLiquidity(address lpToken, uint256 amount) external {
+    function createSubMarket(string memory _description, uint256 _duration) external onlyOwner returns (uint256) {
         // Implementation here
+        return 0; // Return market ID
     }
 }
