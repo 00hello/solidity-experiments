@@ -58,9 +58,8 @@ contract AIOracle {
         requestFee = _newFee;
     }
     
-    // AI on-chain model updates integration
-    function createSubMarket(string memory _description, uint256 _duration) external onlyOwner returns (uint256) {
+    // AI off-chain computation integration
+    function adjustMarketParameters(uint256 _newParameter) external onlyOwner {
         // Implementation here
-        return 0; // Return market ID
     }
 }
