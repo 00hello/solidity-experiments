@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title DeFiProtocol
  * @dev Experimental DeFi protocol for liquidity provision
  * @author Your Name
- * @notice Created on 2024-02-05
+ * @notice Created on 2024-02-09
  */
 interface IERC20 {
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
