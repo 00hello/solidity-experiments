@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title DeFiProtocol
  * @dev Experimental DeFi protocol for staking rewards
  * @author Your Name
- * @notice Created on 2024-01-30
+ * @notice Created on 2024-02-15
  */
 interface IERC20 {
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
@@ -50,9 +50,8 @@ contract DeFiProtocol {
         emit Withdrawal(msg.sender, _amount);
     }
     
-    // interest rate models implementation
-    function aggregatePredictions(uint256[] memory predictionIds) external view returns (string memory) {
+    // risk assessment implementation
+    function sandwichTrade(address pair, uint256 amount) external onlyOwner {
         // Implementation here
-        return "";
     }
 }
