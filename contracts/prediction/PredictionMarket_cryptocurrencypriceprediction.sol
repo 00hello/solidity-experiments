@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for cryptocurrency price prediction
  * @author Your Name
- * @notice Created on 2024-01-26
+ * @notice Created on 2024-02-24
  */
 contract PredictionMarket {
     address public owner;
@@ -77,9 +77,8 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional automated market making functionality
-    function calculateInterest(address user) public view returns (uint256) {
+    // Additional fee optimization functionality
+    function adjustMarketParameters(uint256 _newParameter) external onlyOwner {
         // Implementation here
-        return 0;
     }
 }
