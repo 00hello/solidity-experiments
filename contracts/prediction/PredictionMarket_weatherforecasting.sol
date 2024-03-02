@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for weather forecasting
  * @author Your Name
- * @notice Created on 2025-03-24
+ * @notice Created on 2024-03-02
  */
 contract PredictionMarket {
     address public owner;
@@ -77,9 +77,8 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional oracle integration functionality
-    function processAIData(bytes memory data) internal pure returns (uint256) {
+    // Additional conditional markets functionality
+    function adjustMarketParameters(uint256 _newParameter) external onlyOwner {
         // Implementation here
-        return 0;
     }
 }
