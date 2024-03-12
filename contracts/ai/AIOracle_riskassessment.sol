@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title AIOracle
  * @dev Smart contract that leverages AI for risk assessment
  * @author Your Name
- * @notice Created on 2024-02-23
+ * @notice Created on 2024-03-12
  */
 contract AIOracle {
     address public owner;
@@ -58,9 +58,9 @@ contract AIOracle {
         requestFee = _newFee;
     }
     
-    // AI data sourcing integration
-    function calculateInterest(address user) public view returns (uint256) {
+    // AI federated learning integration
+    function aggregatePredictions(uint256[] memory predictionIds) external view returns (string memory) {
         // Implementation here
-        return 0;
+        return "";
     }
 }
