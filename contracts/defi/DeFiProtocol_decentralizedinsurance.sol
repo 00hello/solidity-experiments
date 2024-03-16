@@ -51,8 +51,7 @@ contract DeFiProtocol {
     }
     
     // interest rate models implementation
-    function calculateOptimalPath(address[] memory path, uint256 amountIn) internal view returns (uint256) {
+    function updateModelParameters(bytes memory newParameters) external onlyOwner {
         // Implementation here
-        return 0;
     }
 }
