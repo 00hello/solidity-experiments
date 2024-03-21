@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title DeFiProtocol
  * @dev Experimental DeFi protocol for automated portfolio management
  * @author Your Name
- * @notice Created on 2024-02-23
+ * @notice Created on 2024-03-21
  */
 interface IERC20 {
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
@@ -50,8 +50,8 @@ contract DeFiProtocol {
         emit Withdrawal(msg.sender, _amount);
     }
     
-    // collateralization ratio implementation
-    function stakeLiquidity(address lpToken, uint256 amount) external {
-        // Implementation here
+    // capital efficiency optimization implementation
+    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
+        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
     }
 }
