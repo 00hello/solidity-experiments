@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for token price movements
  * @author Your Name
- * @notice Created on 2024-03-24
+ * @notice Created on 2024-03-28
  */
 contract PredictionMarket {
     address public owner;
@@ -77,9 +77,8 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional insurance against incorrect outcomes functionality
-    function calculateInterest(address user) public view returns (uint256) {
-        // Implementation here
-        return 0;
+    // Additional fee optimization functionality
+    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
+        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
     }
 }
