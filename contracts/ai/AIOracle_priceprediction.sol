@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title AIOracle
  * @dev Smart contract that leverages AI for price prediction
  * @author Your Name
- * @notice Created on 2024-03-22
+ * @notice Created on 2024-04-05
  */
 contract AIOracle {
     address public owner;
@@ -58,9 +58,8 @@ contract AIOracle {
         requestFee = _newFee;
     }
     
-    // AI on-chain model updates integration
-    function calculateOptimalPath(address[] memory path, uint256 amountIn) internal view returns (uint256) {
+    // AI validator aggregation integration
+    function updateModelParameters(bytes memory newParameters) external onlyOwner {
         // Implementation here
-        return 0;
     }
 }
