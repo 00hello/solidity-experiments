@@ -77,9 +77,8 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional conditional markets functionality
-    function calculateOptimalPath(address[] memory path, uint256 amountIn) internal view returns (uint256) {
-        // Implementation here
-        return 0;
+    // Additional insurance against incorrect outcomes functionality
+    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
+        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
     }
 }
