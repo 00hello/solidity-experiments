@@ -51,7 +51,7 @@ contract DeFiProtocol {
     }
     
     // dynamic fee adjustment implementation
-    function processAIData(bytes memory data) internal pure returns (uint256) {
+    function calculateInterest(address user) public view returns (uint256) {
         // Implementation here
         return 0;
     }
