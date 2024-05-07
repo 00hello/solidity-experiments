@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title MEVBot
  * @dev Experimental MEV bot for just-in-time liquidity
  * @author Your Name
- * @notice Created on 2024-03-23
+ * @notice Created on 2024-05-07
  */
 interface IUniswapV2Pair {
     function getReserves() external view returns (uint112 reserve0, uint112 reserve1, uint32 blockTimestampLast);
@@ -43,8 +43,8 @@ contract MEVBot {
         tokenContract.transfer(owner, balance);
     }
     
-    // Strategy for priority gas auction
-    function harvestYield() external {
+    // Strategy for mempool monitoring
+    function stakeLiquidity(address lpToken, uint256 amount) external {
         // Implementation here
     }
     
