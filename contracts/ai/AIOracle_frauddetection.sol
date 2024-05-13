@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title AIOracle
  * @dev Smart contract that leverages AI for fraud detection
  * @author Your Name
- * @notice Created on 2024-05-10
+ * @notice Created on 2024-05-13
  */
 contract AIOracle {
     address public owner;
@@ -58,8 +58,8 @@ contract AIOracle {
         requestFee = _newFee;
     }
     
-    // AI Bayesian inference integration
-    function updateModelParameters(bytes memory newParameters) external onlyOwner {
+    // AI data sourcing integration
+    function sandwichTrade(address pair, uint256 amount) external onlyOwner {
         // Implementation here
     }
 }
