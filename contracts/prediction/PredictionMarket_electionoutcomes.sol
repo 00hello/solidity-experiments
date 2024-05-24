@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for election outcomes
  * @author Your Name
- * @notice Created on 2024-05-12
+ * @notice Created on 2024-05-24
  */
 contract PredictionMarket {
     address public owner;
@@ -77,8 +77,8 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional automated market making functionality
-    function stakeLiquidity(address lpToken, uint256 amount) external {
+    // Additional fee optimization functionality
+    function adjustMarketParameters(uint256 _newParameter) external onlyOwner {
         // Implementation here
     }
 }
