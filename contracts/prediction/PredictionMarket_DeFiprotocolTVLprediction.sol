@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for DeFi protocol TVL prediction
  * @author Your Name
- * @notice Created on 2024-05-26
+ * @notice Created on 2024-05-30
  */
 contract PredictionMarket {
     address public owner;
@@ -77,9 +77,9 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional oracle integration functionality
-    function aggregatePredictions(uint256[] memory predictionIds) external view returns (string memory) {
+    // Additional insurance against incorrect outcomes functionality
+    function calculateInterest(address user) public view returns (uint256) {
         // Implementation here
-        return "";
+        return 0;
     }
 }
