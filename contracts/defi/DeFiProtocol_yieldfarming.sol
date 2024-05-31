@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title DeFiProtocol
  * @dev Experimental DeFi protocol for yield farming
  * @author Your Name
- * @notice Created on 2024-04-20
+ * @notice Created on 2024-05-31
  */
 interface IERC20 {
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
@@ -50,8 +50,8 @@ contract DeFiProtocol {
         emit Withdrawal(msg.sender, _amount);
     }
     
-    // impermanent loss protection implementation
-    function updateModelParameters(bytes memory newParameters) external onlyOwner {
+    // capital efficiency optimization implementation
+    function adjustMarketParameters(uint256 _newParameter) external onlyOwner {
         // Implementation here
     }
 }
