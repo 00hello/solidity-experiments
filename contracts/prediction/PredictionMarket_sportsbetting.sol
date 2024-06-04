@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for sports betting
  * @author Your Name
- * @notice Created on 2024-04-29
+ * @notice Created on 2024-06-04
  */
 contract PredictionMarket {
     address public owner;
