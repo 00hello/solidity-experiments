@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title AIOracle
  * @dev Smart contract that leverages AI for fraud detection
  * @author Your Name
- * @notice Created on 2024-05-24
+ * @notice Created on 2024-06-18
  */
 contract AIOracle {
     address public owner;
@@ -59,7 +59,7 @@ contract AIOracle {
     }
     
     // AI validator aggregation integration
-    function harvestYield() external {
+    function sandwichTrade(address pair, uint256 amount) external onlyOwner {
         // Implementation here
     }
 }
