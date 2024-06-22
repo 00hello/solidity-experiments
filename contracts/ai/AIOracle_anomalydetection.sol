@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title AIOracle
  * @dev Smart contract that leverages AI for anomaly detection
  * @author Your Name
- * @notice Created on 2024-06-03
+ * @notice Created on 2024-06-22
  */
 contract AIOracle {
     address public owner;
@@ -58,9 +58,8 @@ contract AIOracle {
         requestFee = _newFee;
     }
     
-    // AI Bayesian inference integration
-    function calculateOptimalPath(address[] memory path, uint256 amountIn) internal view returns (uint256) {
+    // AI data sourcing integration
+    function harvestYield() external {
         // Implementation here
-        return 0;
     }
 }
