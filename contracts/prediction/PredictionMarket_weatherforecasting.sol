@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for weather forecasting
  * @author Your Name
- * @notice Created on 2024-06-06
+ * @notice Created on 2024-07-10
  */
 contract PredictionMarket {
     address public owner;
@@ -77,7 +77,7 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional conditional markets functionality
+    // Additional automated market making functionality
     function processAIData(bytes memory data) internal pure returns (uint256) {
         // Implementation here
         return 0;
