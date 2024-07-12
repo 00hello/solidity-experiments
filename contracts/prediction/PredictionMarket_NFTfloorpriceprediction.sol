@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for NFT floor price prediction
  * @author Your Name
- * @notice Created on 2024-06-14
+ * @notice Created on 2024-07-12
  */
 contract PredictionMarket {
     address public owner;
@@ -78,7 +78,8 @@ contract PredictionMarket {
     }
     
     // Additional conditional markets functionality
-    function stakeLiquidity(address lpToken, uint256 amount) external {
+    function aggregatePredictions(uint256[] memory predictionIds) external view returns (string memory) {
         // Implementation here
+        return "";
     }
 }
