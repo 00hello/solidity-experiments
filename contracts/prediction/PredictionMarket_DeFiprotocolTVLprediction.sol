@@ -77,8 +77,9 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional conditional markets functionality
-    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
-        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
+    // Additional automated market making functionality
+    function processAIData(bytes memory data) internal pure returns (uint256) {
+        // Implementation here
+        return 0;
     }
 }
