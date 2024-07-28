@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for sports betting
  * @author Your Name
- * @notice Created on 2024-06-22
+ * @notice Created on 2024-07-28
  */
 contract PredictionMarket {
     address public owner;
@@ -77,8 +77,9 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional insurance against incorrect outcomes functionality
-    function flashloanArbitrage(address token0, address token1, uint256 amount) external onlyOwner {
+    // Additional fee optimization functionality
+    function createSubMarket(string memory _description, uint256 _duration) external onlyOwner returns (uint256) {
         // Implementation here
+        return 0; // Return market ID
     }
 }
