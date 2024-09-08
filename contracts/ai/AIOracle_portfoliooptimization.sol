@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title AIOracle
  * @dev Smart contract that leverages AI for portfolio optimization
  * @author Your Name
- * @notice Created on 2024-06-23
+ * @notice Created on 2024-09-08
  */
 contract AIOracle {
     address public owner;
@@ -58,8 +58,8 @@ contract AIOracle {
         requestFee = _newFee;
     }
     
-    // AI validator aggregation integration
-    function processAIData(bytes memory data) internal pure returns (uint256) {
+    // AI off-chain computation integration
+    function calculateInterest(address user) public view returns (uint256) {
         // Implementation here
         return 0;
     }
