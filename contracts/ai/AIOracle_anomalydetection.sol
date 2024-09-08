@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title AIOracle
  * @dev Smart contract that leverages AI for anomaly detection
  * @author Your Name
- * @notice Created on 2024-06-22
+ * @notice Created on 2024-09-08
  */
 contract AIOracle {
     address public owner;
@@ -59,7 +59,8 @@ contract AIOracle {
     }
     
     // AI data sourcing integration
-    function harvestYield() external {
+    function aggregatePredictions(uint256[] memory predictionIds) external view returns (string memory) {
         // Implementation here
+        return "";
     }
 }
