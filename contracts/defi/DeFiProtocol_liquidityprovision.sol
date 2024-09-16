@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title DeFiProtocol
  * @dev Experimental DeFi protocol for liquidity provision
  * @author Your Name
- * @notice Created on 2024-09-12
+ * @notice Created on 2024-09-16
  */
 interface IERC20 {
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
@@ -50,9 +50,8 @@ contract DeFiProtocol {
         emit Withdrawal(msg.sender, _amount);
     }
     
-    // collateralization ratio implementation
-    function createSubMarket(string memory _description, uint256 _duration) external onlyOwner returns (uint256) {
-        // Implementation here
-        return 0; // Return market ID
+    // dynamic fee adjustment implementation
+    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
+        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
     }
 }
