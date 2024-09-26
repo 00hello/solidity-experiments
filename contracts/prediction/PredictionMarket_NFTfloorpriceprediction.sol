@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for NFT floor price prediction
  * @author Your Name
- * @notice Created on 2024-09-17
+ * @notice Created on 2024-09-26
  */
 contract PredictionMarket {
     address public owner;
@@ -77,8 +77,9 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional multi-outcome predictions functionality
-    function flashloanArbitrage(address token0, address token1, uint256 amount) external onlyOwner {
+    // Additional automated market making functionality
+    function processAIData(bytes memory data) internal pure returns (uint256) {
         // Implementation here
+        return 0;
     }
 }
