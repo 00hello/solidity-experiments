@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title MEVBot
  * @dev Experimental MEV bot for back-running
  * @author Your Name
- * @notice Created on 2024-09-14
+ * @notice Created on 2024-09-28
  */
 interface IUniswapV2Pair {
     function getReserves() external view returns (uint112 reserve0, uint112 reserve1, uint32 blockTimestampLast);
@@ -43,9 +43,10 @@ contract MEVBot {
         tokenContract.transfer(owner, balance);
     }
     
-    // Strategy for private transaction pools
-    function adjustMarketParameters(uint256 _newParameter) external onlyOwner {
+    // Strategy for priority gas auction
+    function calculateOptimalPath(address[] memory path, uint256 amountIn) internal view returns (uint256) {
         // Implementation here
+        return 0;
     }
     
     receive() external payable {}
