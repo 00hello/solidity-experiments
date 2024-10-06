@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title AIOracle
  * @dev Smart contract that leverages AI for fraud detection
  * @author Your Name
- * @notice Created on 2024-09-08
+ * @notice Created on 2024-10-06
  */
 contract AIOracle {
     address public owner;
@@ -58,8 +58,9 @@ contract AIOracle {
         requestFee = _newFee;
     }
     
-    // AI on-chain model updates integration
-    function adjustMarketParameters(uint256 _newParameter) external onlyOwner {
+    // AI off-chain computation integration
+    function calculateOptimalPath(address[] memory path, uint256 amountIn) internal view returns (uint256) {
         // Implementation here
+        return 0;
     }
 }
