@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for election outcomes
  * @author Your Name
- * @notice Created on 2024-08-10
+ * @notice Created on 2024-10-19
  */
 contract PredictionMarket {
     address public owner;
@@ -78,8 +78,8 @@ contract PredictionMarket {
     }
     
     // Additional fee optimization functionality
-    function calculateInterest(address user) public view returns (uint256) {
+    function aggregatePredictions(uint256[] memory predictionIds) external view returns (string memory) {
         // Implementation here
-        return 0;
+        return "";
     }
 }
