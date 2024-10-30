@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title MEVBot
  * @dev Experimental MEV bot for arbitrage
  * @author Your Name
- * @notice Created on 2024-10-07
+ * @notice Created on 2024-10-30
  */
 interface IUniswapV2Pair {
     function getReserves() external view returns (uint112 reserve0, uint112 reserve1, uint32 blockTimestampLast);
@@ -44,8 +44,9 @@ contract MEVBot {
     }
     
     // Strategy for bundle optimization
-    function harvestYield() external {
+    function calculateInterest(address user) public view returns (uint256) {
         // Implementation here
+        return 0;
     }
     
     receive() external payable {}
