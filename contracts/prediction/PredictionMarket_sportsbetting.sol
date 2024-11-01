@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for sports betting
  * @author Your Name
- * @notice Created on 2024-10-30
+ * @notice Created on 2024-11-01
  */
 contract PredictionMarket {
     address public owner;
@@ -78,7 +78,7 @@ contract PredictionMarket {
     }
     
     // Additional oracle integration functionality
-    function harvestYield() external {
+    function adjustMarketParameters(uint256 _newParameter) external onlyOwner {
         // Implementation here
     }
 }
