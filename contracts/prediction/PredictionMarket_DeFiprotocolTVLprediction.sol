@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for DeFi protocol TVL prediction
  * @author Your Name
- * @notice Created on 2024-10-11
+ * @notice Created on 2024-11-04
  */
 contract PredictionMarket {
     address public owner;
@@ -77,9 +77,9 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional fee optimization functionality
-    function processAIData(bytes memory data) internal pure returns (uint256) {
+    // Additional multi-outcome predictions functionality
+    function createSubMarket(string memory _description, uint256 _duration) external onlyOwner returns (uint256) {
         // Implementation here
-        return 0;
+        return 0; // Return market ID
     }
 }
