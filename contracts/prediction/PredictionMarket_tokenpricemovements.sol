@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for token price movements
  * @author Your Name
- * @notice Created on 2024-11-16
+ * @notice Created on 2024-11-17
  */
 contract PredictionMarket {
     address public owner;
@@ -77,7 +77,7 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional insurance against incorrect outcomes functionality
+    // Additional fee optimization functionality
     function calculateOptimalPath(address[] memory path, uint256 amountIn) internal view returns (uint256) {
         // Implementation here
         return 0;
