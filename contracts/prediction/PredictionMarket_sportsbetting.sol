@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for sports betting
  * @author Your Name
- * @notice Created on 2024-12-07
+ * @notice Created on 2024-12-09
  */
 contract PredictionMarket {
     address public owner;
@@ -78,8 +78,7 @@ contract PredictionMarket {
     }
     
     // Additional insurance against incorrect outcomes functionality
-    function aggregatePredictions(uint256[] memory predictionIds) external view returns (string memory) {
-        // Implementation here
-        return "";
+    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
+        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
     }
 }
