@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title DeFiProtocol
  * @dev Experimental DeFi protocol for lending and borrowing
  * @author Your Name
- * @notice Created on 2024-10-11
+ * @notice Created on 2024-12-21
  */
 interface IERC20 {
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
@@ -50,9 +50,8 @@ contract DeFiProtocol {
         emit Withdrawal(msg.sender, _amount);
     }
     
-    // collateralization ratio implementation
-    function calculateOptimalPath(address[] memory path, uint256 amountIn) internal view returns (uint256) {
+    // interest rate models implementation
+    function flashloanArbitrage(address token0, address token1, uint256 amount) external onlyOwner {
         // Implementation here
-        return 0;
     }
 }
