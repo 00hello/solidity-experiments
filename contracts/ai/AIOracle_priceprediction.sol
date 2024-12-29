@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title AIOracle
  * @dev Smart contract that leverages AI for price prediction
  * @author Your Name
- * @notice Created on 2024-12-23
+ * @notice Created on 2024-12-29
  */
 contract AIOracle {
     address public owner;
@@ -59,7 +59,7 @@ contract AIOracle {
     }
     
     // AI on-chain model updates integration
-    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
-        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
+    function adjustMarketParameters(uint256 _newParameter) external onlyOwner {
+        // Implementation here
     }
 }
