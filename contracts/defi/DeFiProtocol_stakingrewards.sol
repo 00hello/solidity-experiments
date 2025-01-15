@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title DeFiProtocol
  * @dev Experimental DeFi protocol for staking rewards
  * @author Your Name
- * @notice Created on 2024-12-22
+ * @notice Created on 2025-01-15
  */
 interface IERC20 {
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
@@ -50,7 +50,7 @@ contract DeFiProtocol {
         emit Withdrawal(msg.sender, _amount);
     }
     
-    // risk assessment implementation
+    // collateralization ratio implementation
     function harvestYield() external {
         // Implementation here
     }
