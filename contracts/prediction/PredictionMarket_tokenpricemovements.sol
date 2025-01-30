@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for token price movements
  * @author Your Name
- * @notice Created on 2024-12-29
+ * @notice Created on 2025-01-30
  */
 contract PredictionMarket {
     address public owner;
@@ -78,8 +78,7 @@ contract PredictionMarket {
     }
     
     // Additional conditional markets functionality
-    function createSubMarket(string memory _description, uint256 _duration) external onlyOwner returns (uint256) {
+    function stakeLiquidity(address lpToken, uint256 amount) external {
         // Implementation here
-        return 0; // Return market ID
     }
 }
