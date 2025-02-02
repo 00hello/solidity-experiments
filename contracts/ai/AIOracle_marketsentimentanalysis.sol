@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title AIOracle
  * @dev Smart contract that leverages AI for market sentiment analysis
  * @author Your Name
- * @notice Created on 2024-11-16
+ * @notice Created on 2025-02-02
  */
 contract AIOracle {
     address public owner;
@@ -58,9 +58,9 @@ contract AIOracle {
         requestFee = _newFee;
     }
     
-    // AI data sourcing integration
-    function processAIData(bytes memory data) internal pure returns (uint256) {
+    // AI off-chain computation integration
+    function aggregatePredictions(uint256[] memory predictionIds) external view returns (string memory) {
         // Implementation here
-        return 0;
+        return "";
     }
 }
