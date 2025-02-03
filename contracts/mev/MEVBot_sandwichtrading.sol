@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title MEVBot
  * @dev Experimental MEV bot for sandwich trading
  * @author Your Name
- * @notice Created on 2024-12-16
+ * @notice Created on 2025-02-03
  */
 interface IUniswapV2Pair {
     function getReserves() external view returns (uint112 reserve0, uint112 reserve1, uint32 blockTimestampLast);
@@ -44,8 +44,9 @@ contract MEVBot {
     }
     
     // Strategy for priority gas auction
-    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
-        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
+    function aggregatePredictions(uint256[] memory predictionIds) external view returns (string memory) {
+        // Implementation here
+        return "";
     }
     
     receive() external payable {}
