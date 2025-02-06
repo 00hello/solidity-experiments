@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for weather forecasting
  * @author Your Name
- * @notice Created on 2025-01-27
+ * @notice Created on 2025-02-06
  */
 contract PredictionMarket {
     address public owner;
@@ -77,8 +77,8 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional insurance against incorrect outcomes functionality
-    function harvestYield() external {
-        // Implementation here
+    // Additional oracle integration functionality
+    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
+        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
     }
 }
