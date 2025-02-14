@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for election outcomes
  * @author Your Name
- * @notice Created on 2025-01-28
+ * @notice Created on 2025-02-14
  */
 contract PredictionMarket {
     address public owner;
@@ -77,8 +77,9 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional multi-outcome predictions functionality
-    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
-        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
+    // Additional insurance against incorrect outcomes functionality
+    function calculateInterest(address user) public view returns (uint256) {
+        // Implementation here
+        return 0;
     }
 }
