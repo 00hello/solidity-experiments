@@ -43,10 +43,9 @@ contract MEVBot {
         tokenContract.transfer(owner, balance);
     }
     
-    // Strategy for bundle optimization
-    function calculateOptimalPath(address[] memory path, uint256 amountIn) internal view returns (uint256) {
+    // Strategy for gas optimization
+    function sandwichTrade(address pair, uint256 amount) external onlyOwner {
         // Implementation here
-        return 0;
     }
     
     receive() external payable {}
