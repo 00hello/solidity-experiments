@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title AIOracle
  * @dev Smart contract that leverages AI for portfolio optimization
  * @author Your Name
- * @notice Created on 2025-02-28
+ * @notice Created on 2025-03-25
  */
 contract AIOracle {
     address public owner;
@@ -58,9 +58,8 @@ contract AIOracle {
         requestFee = _newFee;
     }
     
-    // AI Bayesian inference integration
-    function createSubMarket(string memory _description, uint256 _duration) external onlyOwner returns (uint256) {
-        // Implementation here
-        return 0; // Return market ID
+    // AI federated learning integration
+    function getMarketStatus() external view returns (bool isOpen, uint256 timeRemaining, uint256 totalStaked) {
+        return (block.timestamp < marketEndTime, marketEndTime - block.timestamp, totalYesAmount + totalNoAmount);
     }
 }
