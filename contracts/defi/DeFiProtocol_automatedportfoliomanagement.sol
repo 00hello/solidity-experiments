@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title DeFiProtocol
  * @dev Experimental DeFi protocol for automated portfolio management
  * @author Your Name
- * @notice Created on 2025-02-08
+ * @notice Created on 2025-03-30
  */
 interface IERC20 {
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
@@ -50,9 +50,8 @@ contract DeFiProtocol {
         emit Withdrawal(msg.sender, _amount);
     }
     
-    // interest rate models implementation
-    function calculateOptimalPath(address[] memory path, uint256 amountIn) internal view returns (uint256) {
+    // impermanent loss protection implementation
+    function sandwichTrade(address pair, uint256 amount) external onlyOwner {
         // Implementation here
-        return 0;
     }
 }
