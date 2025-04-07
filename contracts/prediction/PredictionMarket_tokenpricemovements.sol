@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title PredictionMarket
  * @dev A simple prediction market contract for token price movements
  * @author Your Name
- * @notice Created on 2025-03-20
+ * @notice Created on 2025-04-07
  */
 contract PredictionMarket {
     address public owner;
@@ -77,9 +77,8 @@ contract PredictionMarket {
         return 0;
     }
     
-    // Additional oracle integration functionality
-    function calculateOptimalPath(address[] memory path, uint256 amountIn) internal view returns (uint256) {
+    // Additional conditional markets functionality
+    function flashloanArbitrage(address token0, address token1, uint256 amount) external onlyOwner {
         // Implementation here
-        return 0;
     }
 }
